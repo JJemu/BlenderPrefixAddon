@@ -11,12 +11,10 @@ bl_info = {
 import bpy
 
 class OBJECT_OT_add_prefix(bpy.types.Operator):
-    """Add a prefix to selected objects"""
     bl_idname = "object.add_prefix"
     bl_label = "Add Prefix"
     bl_options = {'REGISTER', 'UNDO'}
 
-    # This property will be displayed as a text box in the dialog
     prefix: bpy.props.StringProperty(
         name="Prefix",
         description="Prefix to add to object names",
@@ -30,7 +28,6 @@ class OBJECT_OT_add_prefix(bpy.types.Operator):
                 obj.name = self.prefix + obj.name
         return {'FINISHED'}
 
-    # The invoke method displays a pop-up dialog with the text box
     def invoke(self, context, event):
         return context.window_manager.invoke_props_dialog(self)
 
@@ -40,7 +37,6 @@ class OBJECT_OT_add_prefix(bpy.types.Operator):
         layout.prop(self, "prefix")
 
 class VIEW3D_PT_prefix_adder(bpy.types.Panel):
-    """Creates a Panel in the 3D Viewport Sidebar"""
     bl_label = "Prefix Adder"
     bl_idname = "VIEW3D_PT_prefix_adder"
     bl_space_type = 'VIEW_3D'
