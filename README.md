@@ -25,7 +25,7 @@ A simple Blender addon that allows you to add a custom prefix to the names of se
 - In the 3D Viewport, select the objects to which you want to add a prefix.
 
 **2. Open the Addon Panel:**
-- Press N to open the sidebar and navigate to the Tools tab where you'll see the Prefix Adder panel.
+- Press N to open the sidebar and navigate to the Tool tab where you'll see the Prefix Adder panel.
 
 **3. Add a Prefix:**
 - Click the Add Prefix button. A pop-up dialog will appear where you can enter your desired prefix. Confirm to apply the prefix to all selected objects.
